@@ -1,6 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
 function App() {
   return (
-    <h1>Landing</h1>
+    <>
+      <Header></Header>
+    </>
   );
 }
 
