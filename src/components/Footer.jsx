@@ -2,7 +2,7 @@ import React from 'react';
 import { CDBModalFooter, CDBBox, CDBBtn, CDBCloseIcon } from 'cdbreact';
 import logo from '../assets/images/logo.png';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <CDBModalFooter className="shadow">
       <CDBBox
@@ -40,5 +40,3 @@ const Footer = () => {
     </CDBModalFooter>
   );
 };
-
-export default Footer;

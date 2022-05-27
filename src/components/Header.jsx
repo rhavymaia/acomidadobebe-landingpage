@@ -1,9 +1,13 @@
 import React from 'react';
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
+import { NavLink } from "react-router-dom";
 
 import logo from '../assets/images/logo.png';
+import { App } from '../App';
+import { Signin } from './Signin';
+import { Signup } from './Signup';
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
         <Navbar bg="light" expand="lg">
@@ -16,14 +20,14 @@ const Header = () => {
                 height="30"
                 className="d-inline-block align-top"
               />{' '}
-              A comida do Bebê
+              <NavLink to={"/"} >A comida do Bebê</NavLink>
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="">Sign in</Nav.Link>
-                <Nav.Link href="">Sign up</Nav.Link>
+                <NavLink to={"/signin"} >Sign in</NavLink>
+                <NavLink to={"/signup"} >Sign up</NavLink>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                   <NavDropdown.Item href="#action/3.2">
@@ -44,5 +48,3 @@ const Header = () => {
     </>
   );
 }
-
-export default Header;

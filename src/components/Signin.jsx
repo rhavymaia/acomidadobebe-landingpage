@@ -1,9 +1,14 @@
 import React from "react";
 import icon_google from '../assets/images/icon_google.png';
 import './Form.css'
-const Signin = () => {
+
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+
+export const Signin = () => {
     return (
         <>
+        <Header />
         <div className="outer">
             <form className="form">
                 <h3 className="col text-center">Sign in</h3>
@@ -45,8 +50,7 @@ const Signin = () => {
                 </div>
             </form>
         </div>
+        <Footer />
         </>
     );
 }
-
-export default Signin;

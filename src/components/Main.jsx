@@ -1,14 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel from "./Carousel";
-import CardsGroup from "./CardsGroup";
+import { CCarousel } from "./CCarousel";
+import { CardsGroup } from "./CardsGroup";
 
-const Main = () => {
+export const Main = () => {
   return (
     <>
-      <Carousel></Carousel>
+      <CCarousel></CCarousel>
       <CardsGroup></CardsGroup>
     </>
   );
 }
-
-export default Main;

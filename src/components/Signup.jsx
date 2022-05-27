@@ -2,11 +2,16 @@ import React from "react";
 import "./Form.css"
 import icon_google from "../assets/images/icon_google.png";
 
-const Signup = () =>{
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+
+export const Signup = () =>{
     return (
+        <>
+        <Header />
         <div className="outer">
             <form className="form">
-                <h3>Register</h3>
+                <h3 className="col text-center">Cadastrar</h3>
 
                 <div className="form-group">
                     <label>Nome</label>
@@ -31,9 +36,6 @@ const Signup = () =>{
                 <div className="col text-center">
                     <button type="submit" className="btn btn-dark btn-lg btn-block">Register</button>
                 </div>
-                <p className="forgot-password text-right">
-                    Já possui conta? <a href="/sign-in">Log in</a>
-                </p>
 
                 <div className="col text-center">
                     <button type="button" className="btn btn-light btn-lg btn-block">
@@ -41,12 +43,16 @@ const Signup = () =>{
                     alt=""
                     src={icon_google}
                     width="35"height="35"/>
-                    Entrar com o Google
+                    Cadastrar com o Google
                     </button>
                 </div>
+
+                <p className="forgot-password text-right">
+                    Já possui conta? <a href="/signin">Log in</a>
+                </p>
             </form>
         </div>
+        <Footer />  
+        </>
     );
 }
-
-export default Signup;

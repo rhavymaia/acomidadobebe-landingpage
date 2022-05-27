@@ -1,7 +1,7 @@
 import { CardGroup } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 
-const CardsGroup = () => {
+export const CardsGroup = () => {
     return (
         <CardGroup>
             <Card
@@ -70,5 +70,3 @@ const CardsGroup = () => {
         </CardGroup>
     )
 }
-
-export default CardsGroup;
