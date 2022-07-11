@@ -21,9 +21,9 @@ export const Header = () => {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto">
               <Nav.Link href="/signin">Sign in</Nav.Link>
-              <Nav.Link href="/signup">Sign up</Nav.Link>
+              <Nav.Link className="border rounded" href="/signup">Sign up</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
