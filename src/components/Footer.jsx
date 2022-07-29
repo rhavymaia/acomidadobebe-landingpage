@@ -1,5 +1,5 @@
 import React from "react";
-import { CDBModalFooter, CDBBox, CDBBtn, CDBCloseIcon } from "cdbreact";
+import { CDBModalFooter, CDBBox, CDBBtn } from "cdbreact";
 import logo from "../assets/images/logo.png";
 import facebook_logo from "../assets/images/facebook_logo.png";
 import twitter_logo from "../assets/images/twitter_logo.png";

@@ -31,7 +31,7 @@ export const Signin = () => {
                 Lembrar de mim
               </label>
               <span style={{ float: "right" }}>
-                <a href="#">Esqueceu a senha?</a>
+                <a href="/">Esqueceu a senha?</a>
               </span>
             </div>
           </div>
