@@ -1,7 +1,6 @@
 import React from "react";
 import icon_google from "../assets/images/icon_google.png";
 import "./Form.css"
-import { Footer } from "./Footer";
 
 export const Signup = () => {
   return (
@@ -48,7 +47,6 @@ export const Signup = () => {
           </p>
         </form>
       </div>
-      <Footer />
     </>
   );
 };

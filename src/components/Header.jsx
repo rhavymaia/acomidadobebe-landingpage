@@ -1,5 +1,6 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 import logo from "../assets/images/logo.png";
 
@@ -8,7 +9,9 @@ export const Header = () => {
     <>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand>
+            <NavLink to="/"
+            className="nav-link" >
             <img
               alt=""
               src={logo}
@@ -17,13 +20,17 @@ export const Header = () => {
               className="d-inline-block align-top"
             />{" "}
             A comida do Bebê
+            </NavLink>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/signin">Sign in</Nav.Link>
-              <Nav.Link className="border rounded" href="/signup">Sign up</Nav.Link>
+              <NavLink to="/signin"
+              className="nav-link" >Sign in</NavLink>
+
+              <NavLink to="/signup" 
+              className="border rounded nav-link" >Sign up</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

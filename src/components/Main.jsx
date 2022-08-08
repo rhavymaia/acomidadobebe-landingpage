@@ -4,9 +4,11 @@ import { CardsGroup } from "./CardsGroup";
 
 export const Main = () => {
   return (
-    <>
+    <div
+    // style={{paddingBottom: "90px"}}
+    >
       <CCarousel></CCarousel>
       <CardsGroup></CardsGroup>
-    </>
+    </div>
   );
 }
