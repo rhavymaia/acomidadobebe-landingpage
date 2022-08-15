@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { CCarousel } from "./CCarousel";
-import { CardsGroup } from "./CardsGroup";
+import CCarousel from "./CCarousel";
+import CardsGroup from "./CardsGroup";
 
-export const Main = () => {
+export default function Main() {
   return (
     <div
     // style={{paddingBottom: "90px"}}

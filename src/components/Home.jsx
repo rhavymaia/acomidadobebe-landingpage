@@ -1,7 +1,7 @@
-import { Footer } from "./Footer";
-import { Main } from "./Main";
+import Footer from "./Footer";
+import Main from "./Main";
 
-export const Home = () => {
+export default function Home() {
   return (
     <>
     <Main />

@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { Header } from "./Header";
-import { Home } from "./Home";
-import { Signin } from "./Signin";
-import { Signup } from "./Signup";
+import Header from "./Header";
+import Home from "./Home";
+import Signin from "./Signin";
+import Signup from "./Signup";
 
 
 export const Rotas = () => {

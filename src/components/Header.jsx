@@ -4,14 +4,17 @@ import { NavLink } from "react-router-dom";
 
 import logo from "../assets/images/logo.png";
 
-export const Header = () => {
+export default function Header() {
   return (
     <>
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
             <NavLink to="/"
-            className="nav-link" >
+            className="nav-link"
+            style={isActive => ({
+              color: isActive ? "black" : "black"
+            })} >
             <img
               alt=""
               src={logo}

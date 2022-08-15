@@ -2,7 +2,7 @@ import React from "react";
 import icon_google from "../assets/images/icon_google.png";
 import "./Form.css"
 
-export const Signup = () => {
+export default function Signup() {
   return (
     <>
       <div className="outer">

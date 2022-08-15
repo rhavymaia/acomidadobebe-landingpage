@@ -5,21 +5,21 @@ import Axios from "axios";
 
 import "./Form.css";
 
-export const Signin = () => {
+export default function Signin() {
   const url = "http://localhost:3001/login";
   const [login, setLogin] = useState({});
 
   function submit(event) {
     event.preventDefault();
     Axios.post(url, login)
-    .then(response =>{
-        console.log(response)
-        setLogin({
-          email: "",
-          senha: ""
-        });
+    .then((r) =>{
+      console.log(r);
+      setLogin({
+        email: "",
+        senha: "",
+      });
     })
-    alert("Login feito com sucesso");
+    alert("Login realizado com sucesso!");
   }
 
   const handleChange = (event) => {
@@ -37,13 +37,21 @@ export const Signin = () => {
           <h3 className="col text-center">Sign in</h3>
           <div className="form-group">
             <label>E-mail</label>
-            <input type="email" className="form-control" value={login.email} 
+            <input 
+            type="email" 
+            name="email"
+            className="form-control" 
+            value={login.email || ''} 
             onChange={handleChange} />
           </div>
 
           <div className="form-group">
             <label>Senha</label>
-            <input type="password" className="form-control" value={login.senha}
+            <input 
+            type="password" 
+            name='senha'
+            className="form-control" 
+            value={login.senha || ''}
             onChange={handleChange} />
           </div>
 
@@ -64,7 +72,9 @@ export const Signin = () => {
           </div>
 
           <div className="col text-center form-group">
-            <button type="submit" className="btn btn-dark btn-lg btn-block">
+            <button 
+            type="submit" 
+            className="btn btn-dark btn-lg btn-block">
               Entrar
             </button>
           </div>

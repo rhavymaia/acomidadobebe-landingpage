@@ -1,7 +1,7 @@
 import { CardGroup } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
 
-export const CardsGroup = () => {
+export default function CardsGroup() {
     return (
         <CardGroup>
             <Card

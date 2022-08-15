@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-export const CCarousel = () => {
+export default function CCarousel() {
     return (
         <>
             <Carousel fade>
