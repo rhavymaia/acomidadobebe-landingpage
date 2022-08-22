@@ -2,7 +2,7 @@ import React from "react";
 import { CDBModalFooter, CDBBox, CDBBtn } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
-import logo from "../assets/images/logo.png";
+import baby from "../assets/images/baby.png";
 import facebook_logo from "../assets/images/facebook_logo.png";
 import twitter_logo from "../assets/images/twitter_logo.png";
 import instagram_logo from "../assets/images/instagram_logo.png";
@@ -29,7 +29,7 @@ export default function Footer() {
           style={isActive => ({
             color: isActive ? "black" : "black"
           })} >
-            <img alt="logo" src={logo} width="30px" />
+            <img alt="logo" src={baby} width="30px" />
             <span className="ml-4 h5 mb-0 font-weight-bold">
               A Comida do Bebê
             </span>

@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import logo from "../assets/images/logo.png";
+import baby from "../assets/images/baby.png";
 
 export default function Header() {
   return (
@@ -17,7 +17,7 @@ export default function Header() {
             })} >
             <img
               alt=""
-              src={logo}
+              src={baby}
               width="30"
               height="30"
               className="d-inline-block align-top"

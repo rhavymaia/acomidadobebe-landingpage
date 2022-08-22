@@ -37,7 +37,8 @@ export default function Signin() {
           <h3 className="col text-center">Sign in</h3>
           <div className="form-group">
             <label>E-mail</label>
-            <input 
+            <input
+            required
             type="email" 
             name="email"
             className="form-control" 
@@ -47,7 +48,8 @@ export default function Signin() {
 
           <div className="form-group">
             <label>Senha</label>
-            <input 
+            <input
+            required 
             type="password" 
             name='senha'
             className="form-control" 

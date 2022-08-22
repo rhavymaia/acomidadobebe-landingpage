@@ -1,0 +1,14 @@
+.cards {
+    width: 100%;
+    padding: 20px;
+    border: 0;
+}
+
+.cards-img {
+    width: 100%;
+    padding: 20px;
+}
+
+.cards-text {
+    text-align: justify;
+}

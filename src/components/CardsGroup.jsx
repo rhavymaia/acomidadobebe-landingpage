@@ -1,69 +1,57 @@
 import { CardGroup } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
+import "./cards.css";
+
+import gerencie from "../assets/images/gerencie.png";
+import lista from "../assets/images/lista.png";
+import cardapio from "../assets/images/cardapio.png";
+import receita from "../assets/images/receita.png";
 
 export default function CardsGroup() {
     return (
-        <CardGroup>
-            <Card
-            style={{'padding':'20px', 'border':'0', 'width':'100%'}}
-            >
-                <Card.Img variant="top" src="http://refeicoes.cotanet.com.br/img/site/produtos/comida-fit-entrega-a-domicilio.jpg" />
+        <CardGroup
+        style={{padding:'50px'}} >
+            <Card className="cards">
+                <Card.Img className="cards-img"
+                variant="top" 
+                src={gerencie} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.
+                <Card.Title>Gerencie</Card.Title>
+                <Card.Text className="cards-text" >
+                    Gerencie a dieta da sua família e, principalmente, do seu bebê de uma forma fácil e prática.
                 </Card.Text>
                 </Card.Body>
             </Card>
-            <Card
-            style={{'padding':'20px', 'border':'0'}}
-            >
-                <Card.Img variant="top" src="http://refeicoes.cotanet.com.br/img/site/produtos/comida-fit-entrega-a-domicilio.jpg" />
+            <Card className="cards">
+                <Card.Img className="cards-img"
+                variant="top" 
+                src={lista} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                    This card has supporting text below as a natural lead-in to additional
-                    content.{' '}
+                <Card.Title>Crie listas de compras</Card.Title>
+                <Card.Text className="cards-text" >
+                    Deixe sua lista de compras sempre atualizada de acordo com seu cardápio.
                 </Card.Text>
                 </Card.Body>
             </Card>
-            <Card
-            style={{'padding':'20px', 'border':'0'}}
-            >
-                <Card.Img variant="top" src="http://refeicoes.cotanet.com.br/img/site/produtos/comida-fit-entrega-a-domicilio.jpg" />
+            <Card className="cards">
+                <Card.Img className="cards-img"
+                variant="top" 
+                src={cardapio} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first to
-                    show that equal height action.
+                <Card.Title>Personalize seus cardápios</Card.Title>
+                <Card.Text className="cards-text" >
+                    Deixe seu cardápio com a carinha de cada membro da família.
                 </Card.Text>
                 </Card.Body>
             </Card>
-            <Card
-            style={{'padding':'20px', 'border':'0'}}
-            >
-                <Card.Img variant="top" src="http://refeicoes.cotanet.com.br/img/site/produtos/comida-fit-entrega-a-domicilio.jpg" />
+            <Card className="cards">
+                <Card.Img className="cards-img"
+                variant="top" 
+                src={receita} />
                 <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first to
-                    show that equal height action.
-                </Card.Text>
-                </Card.Body>
-            </Card>
-            <Card
-            style={{'padding':'20px', 'border':'0'}}
-            >
-                <Card.Img variant="top" src="http://refeicoes.cotanet.com.br/img/site/produtos/comida-fit-entrega-a-domicilio.jpg" />
-                <Card.Body>
-                <Card.Title>Card title</Card.Title>
-                <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This card has even longer content than the first to
-                    show that equal height action.
+                <Card.Title>Use receitas</Card.Title>
+                <Card.Text className="cards-text" >
+                    Na dúvida do que preparar? Utilize alguma das receitas que disponibilizmaos para você e sua família.
                 </Card.Text>
                 </Card.Body>
             </Card>

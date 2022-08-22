@@ -1,5 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 
+import slide1 from "../assets/images/slide1.png";
+import slide2 from "../assets/images/slide2.png";
+
 export default function CCarousel() {
     return (
         <>
@@ -7,7 +10,7 @@ export default function CCarousel() {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://mdbootstrap.com/img/new/slides/033.webp"
+                    src={slide1}
                     alt="First slide"
                     />
                     <Carousel.Caption>
@@ -18,7 +21,7 @@ export default function CCarousel() {
                 <Carousel.Item>
                     <img
                     className="d-block w-100"
-                    src="https://mdbootstrap.com/img/new/slides/041.webp"
+                    src={slide2}
                     alt="Second slide"
                     />
 
@@ -27,7 +30,7 @@ export default function CCarousel() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img
                     className="d-block w-100"
                     src="https://mdbootstrap.com/img/new/slides/021.webp"
@@ -40,7 +43,7 @@ export default function CCarousel() {
                     <h3>Third slide label</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
-                </Carousel.Item>
+                </Carousel.Item> */}
             </Carousel>
         </>
     )
