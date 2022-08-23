@@ -5,25 +5,27 @@ import icon_google from "../assets/images/icon_google.png";
 import "./Form.css"
 
 export default function Signup() {
-
+  
   const url = "http://localhost:3001/usuario";
   const [signup, setSignup] = useState({});
 
-  function submit(event) {
-    event.preventDefault();
-    Axios.post(url, signup)
-    .then((r) =>{
-      console.log(r);
-      setSignup({
-        nome: "",
-        sobrenome: "",
-        nascimento: "",
-        email: "",
-        senha: "",
-      });
+  function submit(e){
+    e.preventDefault();
+    Axios.get(url + `?email=${signup.email}`)
+    .then((email)=>{
+      if (email.data.length === 0){ //Se o e-mail não existir
+        Axios.post(url, signup)
+        .then(() => {
+          setSignup({});
+          alert("Cadastro realizado com sucesso!")
+        })
+        .catch((error) => {console.log(error);})
+      } else {
+        alert("E-mail já cadastrado!");
+      }
     })
-    alert("Cadastro realizado com sucesso!");
-  }
+    .catch((error) => {console.log(error);});
+  };
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -35,7 +37,7 @@ export default function Signup() {
       <div className="outer">
         <form onSubmit={(event) => submit(event)}
         className="form">
-          <h3 className="col text-center">Cadastrar</h3>
+          <h3 className="col text-center">Sign up</h3>
 
           <div className="form-group">
             <label>Nome</label>
@@ -93,13 +95,13 @@ export default function Signup() {
           </div>
 
           <div className="col text-center form-group">
-            <button type="submit" className="btn btn-dark btn-lg btn-block">
-              Register
+            <button type="submit" className="btn btn-dark btn-lg btn-block button">
+              Cadastrar
             </button>
           </div>
 
           <div className="col text-center form-group">
-            <button type="button" className="btn btn-light btn-lg btn-block">
+            <button type="button" className="btn btn-light btn-lg btn-block button">
               <img alt="" src={icon_google} width="35" height="35" />
               Cadastrar com o Google
             </button>
@@ -109,6 +111,10 @@ export default function Signup() {
             Já possui conta? <a href="/signin">Log in</a>
           </p>
         </form>
+
+        <small className="small">
+          &copy; A Comida do Bebê, 2022. All rights reserved.
+        </small>
       </div>
     </>
   );

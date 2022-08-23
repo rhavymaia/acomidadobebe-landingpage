@@ -9,17 +9,19 @@ export default function Signin() {
   const url = "http://localhost:3001/login";
   const [login, setLogin] = useState({});
 
+
   function submit(event) {
     event.preventDefault();
-    Axios.post(url, login)
-    .then((r) =>{
-      console.log(r);
-      setLogin({
-        email: "",
-        senha: "",
-      });
+    Axios.get(url + `?email=${login.email}`)
+    .then((response) => {
+      if (response.data.length === 1 & response.data[0].senha === login.senha) { //Se o e-mail existir e a senha informada estiver correta
+        alert("Login realizado com sucesso!");
+        setLogin({});
+      } else {
+        alert("Email ou senha incorretos!");
+      }
     })
-    alert("Login realizado com sucesso!");
+    .catch((error) => {console.log(error);})
   }
 
   const handleChange = (event) => {
@@ -58,25 +60,26 @@ export default function Signin() {
           </div>
 
           <div className="form-group">
+            <span className="span">
+              <a href="/">Esqueceu a senha?</a>
+            </span>
+          </div>
+
+          <div className="form-group">
             <div className="custom-control custom-checkbox">
-              <input
+              <input className="custom-control-input"
                 type="checkbox"
-                className="custom-control-input"
-                id="customCheck1"
               />
-              <label className="custom-control-label form-group" htmlFor="customCheck1">
+              <label className="custom-control-label form-group" >
                 Lembrar de mim
               </label>
-              <span style={{ float: "right" }}>
-                <a href="/">Esqueceu a senha?</a>
-              </span>
             </div>
           </div>
 
           <div className="col text-center form-group">
             <button 
             type="submit" 
-            className="btn btn-dark btn-lg btn-block">
+            className="btn btn-dark btn-lg btn-block button">
               Entrar
             </button>
           </div>
@@ -84,12 +87,16 @@ export default function Signin() {
           <h4 className="col text-center">ou</h4>
 
           <div className="col text-center form-group">
-            <button type="button" className="btn btn-light btn-lg btn-block">
-              <img alt="" src={icon_google} width="35" height="35" />
+            <button type="button" className="btn btn-light btn-lg btn-block button">
+              <img alt="Entrar com o Google" src={icon_google} width="35" height="35" />
               Entrar com o Google
             </button>
           </div>
         </form>
+
+        <small className="small">
+          &copy; A Comida do Bebê, 2022. All rights reserved.
+        </small>
       </div>
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
-import baby from "../assets/images/baby.png";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
@@ -10,20 +10,7 @@ export default function Header() {
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>
-            <NavLink to="/"
-            className="nav-link"
-            style={isActive => ({
-              color: isActive ? "black" : "black"
-            })} >
-            <img
-              alt=""
-              src={baby}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-            />{" "}
-            A comida do Bebê
-            </NavLink>
+            <Logo />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

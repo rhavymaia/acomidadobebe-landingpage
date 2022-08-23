@@ -10,7 +10,7 @@ import receita from "../assets/images/receita.png";
 export default function CardsGroup() {
     return (
         <CardGroup
-        style={{padding:'50px'}} >
+        style={{padding:'30px'}} >
             <Card className="cards">
                 <Card.Img className="cards-img"
                 variant="top" 
