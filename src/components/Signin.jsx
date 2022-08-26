@@ -6,17 +6,22 @@ import Axios from "axios";
 import "./Form.css";
 
 export default function Signin() {
-  const url = "http://localhost:3001/login";
+  const url = "http://localhost:3001/usuario";
   const [login, setLogin] = useState({});
-
 
   function submit(event) {
     event.preventDefault();
+    console.log(url + `?email=${login.email}`);
     Axios.get(url + `?email=${login.email}`)
     .then((response) => {
-      if (response.data.length === 1 & response.data[0].senha === login.senha) { //Se o e-mail existir e a senha informada estiver correta
-        alert("Login realizado com sucesso!");
-        setLogin({});
+      console.log(response.data.length);
+      if (response.data.length === 1) { //Se o e-mail existir e a senha informada estiver correta
+        if (response.data[0].senha === login.senha){
+          alert("Login realizado com sucesso!");
+          setLogin({});
+        } else {
+          alert("Email ou senha incorretos!");
+        }
       } else {
         alert("Email ou senha incorretos!");
       }

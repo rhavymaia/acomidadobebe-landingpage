@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import Axios from "axios";
+
 import icon_google from "../assets/images/icon_google.png";
 import "./Form.css"
 
@@ -108,7 +110,8 @@ export default function Signup() {
           </div>
 
           <p className="forgot-password text-right">
-            Já possui conta? <a href="/signin">Log in</a>
+            Já possui conta?  
+            <NavLink to="/signin">Log in</NavLink>
           </p>
         </form>
 

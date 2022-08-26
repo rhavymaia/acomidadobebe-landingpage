@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import baby from "../assets/images/baby.png";
+import logo2 from "../assets/images/logo2.png";
 
 export default function Logo() {
     return (
@@ -12,8 +12,8 @@ export default function Logo() {
     })} >
         <img
         alt=""
-        src={baby}
-        width="30"
+        src={logo2}
+        width="37"
         height="30"
         className="d-inline-block align-top"
         />{" "}
