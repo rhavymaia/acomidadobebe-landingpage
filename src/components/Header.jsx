@@ -11,7 +11,7 @@ export default function Header() {
         <Container>
           <Navbar.Brand>
             <Logo />
-            Jenkins Build Teste - Load Balancer - Build Automático 3
+            Jenkins Build Teste - Load Balancer - Build Automático 4
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
