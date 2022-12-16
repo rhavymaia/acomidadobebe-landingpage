@@ -12,7 +12,6 @@ export default function Header() {
           <Navbar.Brand>
             <Logo />
           </Navbar.Brand>
-      Build Automático Jenkins
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
